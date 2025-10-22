@@ -7,7 +7,7 @@ tags = {
 Name = "terraform-vpc"
 }
 }
-resorce "aws_subnet" "two" {
+resource "aws_subnet" "two" {
 cidr_block = "10.0.0.0/16"
 vpc_id = aws_vpc.one.id
 availability_zone = "us-east-1b" 
