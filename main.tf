@@ -20,8 +20,8 @@ Name = "${terraform.workspace}"
 
 resource "aws_instance" "three" {
 ami = "ami-0f3caa1cf4417e51b"
-count = 2
-instance_type = "t2.micro"
+count = var.instance_count
+instance_type = "var.instance_type"
 tags = {
 Name = "${terraform.workspace}"
 }
